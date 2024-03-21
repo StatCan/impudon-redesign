@@ -65,35 +65,53 @@ cd <repo-name>
 
 5. Refer to the `examples/` directory for Jupyter notebooks that demonstrate the usage and application of the imputation methods.
 
-
-
-## Requirements
-To install the dependencies:
+## Virtual Environment
+We recommend setting up a virtual environment to manage and contain this project's dependencies, as opposed to using the global environment.
+ 
+#### To set up a python virtual environment:
+To create a virtual environment named **env_name**.
  
 ```bash
-$ pip install --index-url=https://f3eaipitcat12.statcan.ca:8443/artifactory/api/pypi/pypi/simple --trusted-host=f3eaipitcat12.statcan.ca:8443 --user -r requirements.txt
+$ python -m venv <path-to-envs>/env_name
 ```
-If you get the following error:
+
  
-**ERROR:** *Can not perform a '--user' install. User site-packages are not visible in this virtualenv.*
- 
-Then remove the *--user* option from the command:
- 
+To activate virtual environment with **Command Prompt (Windows System)**.
  
 ```bash
-$ pip install --index-url=https://f3eaipitcat12.statcan.ca:8443/artifactory/api/pypi/pypi/simple --trusted-host=f3eaipitcat12.statcan.ca:8443 -r requirements.txt
+$ <path-to-envs>/env_name/Scripts/activate
 ```
  
+To activate virtual environment with **cmd.exe**.
+ 
+```bash
+$ <path-to-envs>/env_name/Scripts/activate.bat 
+```
+ 
+ 
+To activate virtual environment with **PowerShell**.
+ 
+```bash
+$ <path-to-envs>/env_name/Scripts/activate.ps1
+```
+
 To deactivate your virtual environment:
  
 ```bash
 $ deactivate
 ```
 
+## Requirements
+To install the dependencies once your virtual environment is activated:
+ 
+```bash
+$ pip install -r requirements.txt
+```
+
  
 ## License
  
-Unless otherwise specified, the source code of this project is covered under Crown Copyright, Government of Canada, and is distributed under the [MIT License](https://gitlab.k8s.cloud.statcan.ca/impudon/impudon-python/-/blob/main/LICENSE).
+Unless otherwise specified, the source code of this project is covered under Crown Copyright, Government of Canada, and is distributed under the [MIT License](https://github.com/StatCan/impudon-redesign/-/blob/main/LICENSE).
  
 The Canada wordmark and related graphics associated with this distribution are protected under trademark law and copyright law. No permission is granted to use them outside the parameters of the Government of Canada's corporate identity program. For more information, see [https://www.canada.ca/en/treasury-board-secretariat/topics/government-communications/federal-identity-requirements.html](Federal identity requirements).
  
@@ -101,6 +119,5 @@ The Canada wordmark and related graphics associated with this distribution are p
  
 ## Authors
  
-* **Loïc Muhirwa** - *Initial work* - [muhiloi](https://f3eaipitcap01.statcan.ca/muhiloi) <br/>
+* **Loïc Muhirwa** - *Initial work* - [lmuhi](https://github.com/lmuhi) <br/>
 * **Angela Wang-Lin** - *Initial work* - [angela.wang-lin](https://gitlab.k8s.cloud.statcan.ca/angela.wang-lin) <br/>
-* **Siddhartha Haldar** - *Initial work* - [siddhartha.haldar ](https://gitlab.k8s.cloud.statcan.ca/siddhartha.haldar) <br/>
